@@ -75,8 +75,13 @@ WSGI_APPLICATION = 'EventPlatform.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'event_platform',
+        'USER': 'production_user',
+        'PASSWORD': 'secret_production_password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+
     }
 }
 

@@ -1,7 +1,7 @@
 
 envEvent_Platform/
 __pycache__/
-*.sqlite3
+*.mysql
 local_settings.py
 media/
 .DS_Store   # Mac OS-specific system files
