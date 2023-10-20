@@ -1,0 +1,8 @@
+
+envEvent_Platform/
+__pycache__/
+*.sqlite3
+local_settings.py
+media/
+.DS_Store   # Mac OS-specific system files
+.idea/      # IDE-specific configuration files, like those for PyCharm
