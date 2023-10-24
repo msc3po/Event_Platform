@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
-    'EventPlatform'
+    'EventPlatform.users',
+    'EventPlatform',
 
 ]
 
@@ -88,7 +88,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'EventPlatform.User'
+AUTH_USER_MODEL = 'users.User'
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 

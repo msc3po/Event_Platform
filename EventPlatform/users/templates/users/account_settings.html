@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information</title>
+    <style>
+        /* Simple styling to make the form resemble the image */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .profile-upload {
+            width: 150px;
+            height: 150px;
+            border: 2px dashed #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Account Information</h2>
+    <p>Eventbrite account since 30 May 2023</p>
+
+    <h3>Profile Photo</h3>
+    <div class="profile-upload">
+        ADD A PROFILE IMAGE<br>
+        Drag and drop a file to upload
+    </div>
+
+    <h3>Contact Information</h3>
+    <form method="post" enctype="multipar/form-data" action="'{% 'account_settings'}">
+      {% csrf_token %}
+
+        <label for="prefix">Prefix</label>
+        <select id="prefix" name="prefix">
+            <option value="Mr.">Mr.</option>
+            <!-- Add other prefixes as needed -->
+        </select>
+
+        <!-- Add other form fields similarly -->
+
+        <label for="homeAddress">Home Address</label>
+        <input type="text" id="homeAddress" name="homeAddress">
+
+        <!-- Add other address fields similarly -->
+
+        <label for="billingAddress">Billing Address</label>
+        <input type="text" id="billingAddress" name="billingAddress">
+
+        <!-- And so on... -->
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
